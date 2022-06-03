@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function Form() {
-  const [form, setForm] = useState({ fulname: "", phone_number: "" });
+function Form({ contacts, setContacts }) {
+  const [form, setForm] = useState({ fullname: "", phone_number: "" });
 
   const onChangeInput = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -12,12 +12,17 @@ function Form() {
     if (form.fullname === "" || form.phone_number === "") {
       return false;
     }
+
+    setContacts([...contacts, form]);
+
+    setForm({ fullname: "", phone_number: "" });
   };
   return (
     <form onSubmit={onSubmit}>
       <div>
         <input
           name="fullname"
+          value={form.fullname}
           placeholder="Full Name"
           onChange={onChangeInput}
         />
@@ -26,6 +31,7 @@ function Form() {
       <div>
         <input
           name="phone_number"
+          value={form.phone_number}
           placeholder="Phone Number"
           onChange={onChangeInput}
         />
