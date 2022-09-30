@@ -1,24 +1,36 @@
-import React, { useState, useEffect } from "react";
-import "./styles.css";
-import Form from "./Form";
-import List from "./List";
+import React, { useState } from "react";
 
-function Contacts() {
-  const [contacts, setContacts] = useState([
-    { fullname: "Mehmet", phone_number: "05343445566" },
-    { fullname: "Mustafa", phone_number: "02123335456" },
-  ]);
+function List({ contacts }) {
+  const [filterText, setFilterText] = useState("");
 
-  useEffect(() => {
-    console.log(contacts);
-  }, [contacts]);
+  const filtered = contacts.filter((item) => {
+    return Object.keys(item).some((key) =>
+      item[key]
+        .toString()
+        .toLowerCase()
+        .includes(filterText.toLocaleLowerCase())
+    );
+  });
+
   return (
-    <div id="container">
-      <h1>Contacts</h1>
-      <List contacts={contacts} />
-      <Form contacts={contacts} setContacts={setContacts} />
+    <div>
+      <input
+        placeholder="Filter contact"
+        value={filterText}
+        onChange={(e) => setFilterText(e.target.value)}
+      />
+      <ul className="list">
+        {filtered.map((e, i) => (
+          <li key={i}>
+            <span>{e.fullname}</span>
+            <span>{e.phone_number}</span>
+          </li>
+        ))}
+      </ul>
+
+      <p>Total Contacts ({filtered.length})</p>
     </div>
   );
 }
 
-export default Contacts;
+export default List;
