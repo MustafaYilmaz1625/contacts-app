@@ -1,8 +1,13 @@
 #container {
-  width: 400px;
+  width: 500px;
   background-color: rgb(183, 213, 238);
   padding: 20px;
 }
+
+*{
+  font-size: 20px;
+}
+
 h1 {
   display: flex;
   justify-content: center;
@@ -22,16 +27,17 @@ li {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
 }
+
+
 .list {
   margin: 15px 0;
 }
 .list > li {
-  background-color: antiquewhite;
+  background-color: rgb(229, 225, 147);
   padding: 5px;
-  margin-bottom: 2px;
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 4px;
 }
 
 .btn {
@@ -44,6 +50,21 @@ li {
   padding: 5px;
   background-color: #76ff03;
   border: 0.5px solid #90a4ae;
-  border-radius: 4x;
+  border-radius: 15px;
   width: 60px;
+}
+
+.lists{
+  height: 15rem;
+  /* background-color: red; */
+}
+
+
+.btnDelete {
+    background-color: #a14b4b;
+    color: #fff;
+    border: none;
+    /* padding: 1px 4px; */
+    font-size: 16px;
+   
 }
