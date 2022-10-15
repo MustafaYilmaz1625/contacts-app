@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./styles.css";
 // import List from "./List";
 import Form from "./Form";
@@ -9,10 +9,7 @@ function Contacts() {
         {fullname: "mustafa yılmaz", phone_number: "555353535" }
     ]);
 
-    // useEffect(()=>{
-    //   console.log(contacts);
-    // },[contacts])
-
+    
     return (
         <div id='container' className='rounded-3'>
             <h1 className='text-center fw-bolder text-danger'>Contacts</h1>
