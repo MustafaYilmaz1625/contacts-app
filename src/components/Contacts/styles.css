@@ -28,9 +28,7 @@ li {
   margin: 0;
   padding: 0;
   list-style-type: none;
-
 }
-
 
 .list {
   margin: 15px 0;
@@ -45,6 +43,8 @@ li {
   display: flex;
   justify-content: flex-end;
   padding: 5px 0;
+  text-decoration: none;
+  border: none;
 }
 
 .btn > button {
@@ -61,7 +61,6 @@ li {
 
 .lists{
   height: 15rem;
-  /* background-color: red; */
 }
 
 
