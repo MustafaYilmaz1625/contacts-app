@@ -6,7 +6,7 @@ import List from "./list";
 
 function Contacts() {
     const [contacts, setContacts] = useState([
-        {fullname: "mujstafa", phone_number: "555353535" }
+        {fullname: "mustafa yılmaz", phone_number: "555353535" }
     ]);
 
     // useEffect(()=>{
