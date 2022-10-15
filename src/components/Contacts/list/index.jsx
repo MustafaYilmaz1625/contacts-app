@@ -20,6 +20,7 @@ function List({ contacts, setContacts }) {
   return (
     <div>
       <input
+        className="form-control"
         placeholder="Filter contact"
         value={filterText}
         onChange={(e) => setFilterText(e.target.value)}
@@ -29,8 +30,11 @@ function List({ contacts, setContacts }) {
           {filtered.map((e, i) => (
             <li key={i} className=" container fw-bold">
               <div className="row">
-                <div className="col-5">
-                  <span>{i+1}. {e.fullname}</span>
+                <div className="col-5 firstName">
+                  <span>
+                    <span className="text-danger">{i + 1}. </span>
+                    {e.fullname}
+                  </span>
                 </div>
                 <div className="col-5 text-end">
                   <span>{e.phone_number}</span>

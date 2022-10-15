@@ -30,6 +30,7 @@ function Form({ contacts, setContacts }) {
       <div>
         <input
           name="fullname"
+          className="form-control"
           value={form.fullname}
           placeholder="Full Name"
           onChange={onChangeInput}
@@ -39,6 +40,7 @@ function Form({ contacts, setContacts }) {
       <div>
         <input
           type="number"
+          className="mt-1 form-control"
           name="phone_number"
           value={form.phone_number}
           placeholder="Phone Number"
