@@ -42,7 +42,7 @@ function List({ contacts, setContacts }) {
                 <div className="col-2 text-end">
                   <button
                     className="btnDelete px-2 rounded-3"
-                    onClick={() => deleteHandler(e)}
+                    onClick={() => deleteHandler(i)}
                   >
                     <i className="bi bi-dash-circle"></i>
                   </button>

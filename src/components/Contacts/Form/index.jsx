@@ -23,7 +23,7 @@ function Form({ contacts, setContacts }) {
 
     setContacts([...contacts, form]);
 
-    // setForm({ fullname: "", phone_number: "" });
+    setForm({ fullname: "", phone_number: "" });
   };
   return (
     <form onSubmit={onSubmit}>
